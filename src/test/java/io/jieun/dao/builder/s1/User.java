@@ -18,7 +18,6 @@ public class User {
         this.address = builder.address;
     }
 
-
     public static class Builder {
 
         private String name;
@@ -46,11 +45,26 @@ public class User {
             return this;
         }
 
-        public User builder() {
+        public User build() {
             return new User(this);
         }
 
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
 

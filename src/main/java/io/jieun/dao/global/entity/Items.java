@@ -1,5 +1,7 @@
 package io.jieun.dao.global.entity;
 
+import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,9 +11,14 @@ import java.util.Objects;
 
 @Getter
 //@Builder
-@NoArgsConstructor
+@Entity
+@Table(name = "items")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Items {
 
+    @Id
+    @Column(name = "item_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //주키가 identity 타입으로 주었다
     private Long id;
     private String name;
     private String itemCode;
