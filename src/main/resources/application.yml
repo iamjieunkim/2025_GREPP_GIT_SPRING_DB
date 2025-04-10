@@ -5,7 +5,7 @@ spring:
     password: jieun
 
 mybatis:
-  type-aliases-package: io.jieun.dao.dao.global.entity
+  type-aliases-package: io.jieun.dao.global.entity
   configuration:
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mappers/*.xml

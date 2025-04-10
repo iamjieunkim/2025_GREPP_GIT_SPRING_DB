@@ -1,5 +1,6 @@
 package io.jieun.dao.global.entity;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -7,6 +8,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Getter
+//@Builder
 @NoArgsConstructor
 public class Items {
 
@@ -18,6 +20,7 @@ public class Items {
 
     private LocalDateTime createdAt;
 
+    @Builder
     public Items(String name, String itemCode, Integer price) {
         this.name = name;
         this.itemCode = itemCode;

@@ -3,3 +3,9 @@ spring:
     url: jdbc:mysql://localhost:3306/grepp_dao
     username: happy
     password: jieun
+
+mybatis:
+  type-aliases-package: io.jieun.dao.global.entity
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mappers/*.xml

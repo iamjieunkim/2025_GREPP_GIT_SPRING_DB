@@ -12,7 +12,7 @@
      -->
 
     <insert id="save" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO items (name, code, price) VALUES (#{name}, #{itemcode}, #{price})
+        INSERT INTO items (name, code, price) VALUES (#{name}, #{itemCode}, #{price})
     </insert>
 
     <update id="update">
