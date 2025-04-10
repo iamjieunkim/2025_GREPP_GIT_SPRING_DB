@@ -78,14 +78,15 @@ class MyBatisItemRepositoryTests {
     @DisplayName("유효한 itemcode는 item을 조회할 수 있고 그렇지 않으면 조회가 불가능하다.")
     void find_by_item_code_test() throws Exception {
 
-        String VALID_ITEM_CODE = TestUtils.genRandomItemCode();
         String INVALID_ITEM_CODE = "INVALID_ITEM_CODE";
+        String VALID_ITEM_CODE = TestUtils.genRandomItemCode(); // 예: "ITEM_24833"
 
         Items validItem = Items.builder()
                 .name(TestUtils.genRandomItemCode())
-                .itemCode(TestUtils.genRandomItemCode())
+                .itemCode(VALID_ITEM_CODE) // 요기!
                 .price(TestUtils.genRandomPrice())
                 .build();
+
 
 
         when(mapper.findByItemCode(VALID_ITEM_CODE)).thenReturn(Optional.of(validItem));
