@@ -13,9 +13,10 @@ class MyBatisItemRepositoryTests {
     @Test
     @DisplayName("상품등록서비스")
     void item_save_test() throws Exception {
-    
-        new Items("CODE", "NAME", 1000);
-    
+
+        Items items = new Items("CODE", "NAME", 1000);
+        log.info("items = {}", items);
+
     }
 
 }
