@@ -1,10 +1,7 @@
 package io.jieun.dao.global.entity;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -23,6 +20,7 @@ public class Items {
     private String name;
     private String itemCode;
 
+    @Setter
     private Integer price;
 
     private LocalDateTime createdAt;
