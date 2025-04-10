@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Slf4j
 @Repository
 @RequiredArgsConstructor
@@ -21,7 +23,7 @@ public class MyBatisItemRepository {
         mapper.update(id, price);
     }
 
-    public Items findByItemCode(String itemCode) {
+    public Optional<Items> findByItemCode(String itemCode) {
         return mapper.findByItemCode(itemCode);
     }
 
