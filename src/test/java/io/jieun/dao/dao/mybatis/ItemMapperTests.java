@@ -1,6 +1,7 @@
 package io.jieun.dao.dao.mybatis;
 
 import io.jieun.dao.global.entity.Items;
+import io.jieun.dao.util.TestUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,9 +23,9 @@ class ItemMapperTests {
 
 
         Items item = Items.builder()
-                .itemCode("ITEM_45682")
-                .name("ITEM_45682")
-                .price(1_000)
+                .itemCode(TestUtils.genRandomItemCode())
+                .name(TestUtils.genRandomItemCode())
+                .price(TestUtils.genRandomPrice())
                 .build();
 
         //mapper를 통해서 바로 저장을 하려고 함

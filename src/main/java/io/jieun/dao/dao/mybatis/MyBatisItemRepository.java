@@ -12,8 +12,9 @@ public class MyBatisItemRepository {
 
     private final ItemMapper mapper;
 
-    public void save(Items items) {
+    public Items save(Items items) {
         mapper.save(items);
+        return items;
     }
 
     public void updatePrice(Long id, Integer price) {
