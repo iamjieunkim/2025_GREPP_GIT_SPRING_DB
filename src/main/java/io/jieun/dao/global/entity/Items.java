@@ -18,6 +18,8 @@ public class Items {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //주키가 identity 타입으로 주었다
     private Long id;
     private String name;
+
+    @Column(name = "code", nullable = false, unique = true)
     private String itemCode;
 
     @Setter
